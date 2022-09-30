@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/utils/colors.dart';
 
+import '../widgets/primary_text.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -14,15 +16,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-            margin: EdgeInsets.only(top: 25, bottom: 15),
-            padding: EdgeInsets.only(left: 20, right: 20),
+            margin: const EdgeInsets.only(top: 25, bottom: 15),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(children: const [
-                  Text('Country'),
-                  Text('Qena'),
+                Column(children: [
+                  PrimaryText(
+                    text: 'Country',
+                    color: AppColors.mainColor,
+                  ),
+                  const Text('Qena'),
                 ]),
                 Container(
                   width: 45,
